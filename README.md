@@ -54,10 +54,30 @@ data_affect.csv \& data_net_density.csv --> https://osf.io/jmz2n/overview
 }
 
 
-### 1. mlVAR \& 2. GIMME
+###  mlVAR_GIMME.Rmd
+#### 1. mlVAR
+@article{Epskamp.2018.GMM-GVAR,
+author = {Epskamp, Sacha and Waldorp, Lourens J. and M?ttus, Ren? and Borsboom, Denny},
+title = {The Gaussian Graphical Model in Cross-Sectional and Time-Series Data},
+journal = {Multivariate Behavioral Research},
+volume = {53},
+number = {4},
+pages = {453--480},
+year = {2018},
+publisher = {Routledge},
+doi = {10.1080/00273171.2018.1454823}   
+}
+also: https://arxiv.org/abs/1609.04156
+
+Other Tutorial:   
+- https://quantdev.ssri.psu.edu/sites/qdev/files/APA-ATI_ILD_Session_R_-_Multivariate_Dynamics_and_Networks.html
 
 
-### 3. Recurrence Analysis
+#### 2. GIMME
+
+
+### RecurrenceAnalysis.ipynb
+#### 3. Recurrence Analysis
 
 
 # IMPS 2026 Poster
