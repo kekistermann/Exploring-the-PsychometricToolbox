@@ -1,6 +1,8 @@
 # Reconciling latent variables and networks: Exploring and extending the Psychometric-Toolbox
-https://arxiv.org/abs/2603.26116
-#### Data: 
+prePrint: https://arxiv.org/abs/2603.26116
+
+## Utilize your Tools (Tutorials)
+### Data: 
 
 data_affect.csv \& data_net_density.csv --> https://osf.io/jmz2n/overview
 
@@ -52,10 +54,10 @@ data_affect.csv \& data_net_density.csv --> https://osf.io/jmz2n/overview
 }
 
 
-## mlVAR \& GIMME
+### 1. mlVAR \& 2. GIMME
 
 
-## Recurrence Analysis
+### 3. Recurrence Analysis
 
 
-## IMPS 2026 Poster
+# IMPS 2026 Poster
