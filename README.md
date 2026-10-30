@@ -1,5 +1,5 @@
-# Exploring-the-PsychometricToolbox
-
+# Reconciling latent variables and networks: Exploring and extending the Psychometric-Toolbox
+https://arxiv.org/abs/2603.26116
 ## Data: 
 
 data_affect.csv \& data_net_density.csv --> https://osf.io/jmz2n/overview
