@@ -2,7 +2,9 @@
 
 ## Data: 
 
-https://osf.io/jmz2n/overview
+data_affect.csv
+data_net_density.csv
+--> https://osf.io/jmz2n/overview
 
 @article{Rowland.2016.Dataset,
  author = {Rowland, Zarah and Wenzel, Mario and Kubiak, Thomas},
