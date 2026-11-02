@@ -58,7 +58,7 @@ also: https://arxiv.org/abs/1609.04156
 ```
 
 ```math
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+\mathbf{x}_{i,T} \mid \mathbf{x}_{i,T-1} = \mathbf{x}_{i,t-1} \sim \mathcal{N}\left(\boldsymbol{\mu}_i + \mathbf{B}_i \left(\mathbf{x}_{i,t-1} - \boldsymbol{\mu}_i\right), \boldsymbol{\Theta}_i\right) \tag{11}
 ```
 
 ```r
