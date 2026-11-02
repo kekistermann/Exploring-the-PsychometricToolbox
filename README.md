@@ -16,7 +16,7 @@
 
 # Utilize your Tools (Tutorials)
 
-In this Tutorial-Section three methods (mlVAR, GIMME, and Recurrence Analysis) are applied to a psychometric ILD dataset from ([Rowland & Wenzel, 2020](https://doi.org/10.1007/s12671-020-01335-4)).
+In this Tutorial-Section three methods (mlVAR, GIMME, and Recurrence Analysis) are applied to a psychometric ILD dataset from [Rowland & Wenzel (2020)](https://doi.org/10.1007/s12671-020-01335-4).
 ```bibtex
 @article{Rowland.2020.Dataset,
  author = {Rowland, Zarah and Wenzel, Mario},
@@ -35,10 +35,11 @@ Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.
 
 > [!NOTE]  
 > `data_affect.csv` available at https://osf.io/jmz2n/overview<br>
-> see [data_README.pdf](data_README.pdf) for detailed informaiton of the dataset.
+> see [data_README.pdf](data_README.pdf) for detailed informaiton about the dataset.
 
 
 ## 1. Multi-Level Vector Autoregression (in [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd))
+[![R-Package: mlVAR](https://img.shields.io/badge/R--Package-mlVAR-blue)](https://cran.r-project.org/web/packages/mlVAR/index.html)
 ```bibtex
 @article{Epskamp.2018.GGM-GVAR,
  author = {Epskamp, Sacha and Waldorp, Lourens J. and M{\~o}ttus, Ren{\'e} and Borsboom, Denny},
@@ -51,7 +52,7 @@ Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.
  doi = {10.1080/00273171.2018.1454823}
 }
 ```
-[![R-Package: mlVAR](https://img.shields.io/badge/R--Package-mlVAR-blue)](https://cran.r-project.org/web/packages/mlVAR/index.html)
+
 
 ```r
 library(mlVAR)
