@@ -16,8 +16,8 @@
 
 ## Utilize your Tools (Tutorials)
 
+`*******`
 
-> [data_affect.csv](https://osf.io/jmz2n/overview)
 
 ([Rowland & Wenzel, 2020](https://doi.org/10.1007/s12671-020-01335-4))
 ```bibtex
@@ -35,7 +35,8 @@
 ```
 
 
-
+> [!NOTE]  
+> `data_affect.csv` available at https://osf.io/jmz2n/overview
 
 ###  mlVAR_GIMME.Rmd
 #### 1. mlVAR
