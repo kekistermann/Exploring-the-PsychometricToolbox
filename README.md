@@ -51,7 +51,7 @@ Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.
  doi = {10.1080/00273171.2018.1454823}
 }
 ```
-The multilevel VAR (mlVAR; [Epskamp, Waldorp, et al., 2018](https://www.tandfonline.com/doi/full/10.1080/00273171.2018.1454823)) models each person with an individual gVAR model. Two estimation methods are implemented in R-Packages, the _pooled and individual LASSO estimation_ with `mlGraphicalVAR()` in [![R-Package: mlVAR](https://img.shields.io/badge/R--Package-graphicalVAR-blue)](https://cran.r-project.org/web/packages/graphicalVAR/index.html) and used in the original analy sis of [Rowland & Wenzel (2020)](https://doi.org/10.1007/s12671-020-01335-4), and the "two step frequentist multilevel" approach which is im plemented with mlVAR(...) in [![R-Package: mlVAR](https://img.shields.io/badge/R--Package-mlVAR-blue)](https://cran.r-project.org/web/packages/mlVAR/index.html). 
+The multilevel VAR (mlVAR; [Epskamp, Waldorp, et al., 2018](https://www.tandfonline.com/doi/full/10.1080/00273171.2018.1454823)) models each person with an individual gVAR model. Two estimation methods are implemented in R-Packages, the _pooled and individual LASSO estimation_ with `mlGraphicalVAR()` in [![R-Package: mlVAR](https://img.shields.io/badge/R--Package-graphicalVAR-blue)](https://cran.r-project.org/web/packages/graphicalVAR/index.html) and used in the original analy sis of [Rowland & Wenzel (2020)](https://doi.org/10.1007/s12671-020-01335-4), and the "two step frequentist multilevel" approach which is im plemented with `mlVAR()` in [![R-Package: mlVAR](https://img.shields.io/badge/R--Package-mlVAR-blue)](https://cran.r-project.org/web/packages/mlVAR/index.html). 
 
 ```r
 library(mlVAR)
