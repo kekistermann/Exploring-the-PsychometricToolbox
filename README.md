@@ -65,9 +65,15 @@ library(mlVAR)
 ```
 
 <p align="center">
-  <img src="figures/results.png" width="700"/>
+  <img src="figures/figure_mlVAR.jpg" width="700"/>
   <br>
   <em>Figure?: Description.</em>
+</p>
+
+
+<p align="center">
+  <img src="figures/figure_mlVAR.jpg" width="45%"/>
+  <img src="figures/figure_mlVAR.jpg" width="45%"/>
 </p>
 
 
