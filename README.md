@@ -58,8 +58,10 @@ also: https://arxiv.org/abs/1609.04156
 ```
 
 ```math
-\mathbf{x}_{i,T} \mid \mathbf{x}_{i,T-1} = \mathbf{x}_{i,t-1} \sim \mathcal{N}\left(\boldsymbol{\mu}_i + \mathbf{B}_i \left(\mathbf{x}_{i,t-1} - \boldsymbol{\mu}_i\right), \boldsymbol{\Theta}_i\right) \tag{11}
+\boldsymbol{x}_{i,T} \mid \boldsymbol{x}_{i,T-1} = \mathbf{x}_{i,t-1} \sim \mathcal{N}\left(\boldsymbol{\mu}_i + \boldsymbol{B}_i\left(\boldsymbol{x}_{i,t-1} - \boldsymbol{\mu}_i\right), \boldsymbol{\Theta}_i\right)
 ```
+
+
 
 ```r
 library(mlVAR)
