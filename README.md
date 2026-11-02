@@ -1,7 +1,7 @@
 
 
 > [!NOTE]  
-> Code of the Tutorial-Part in
+> Provides the code of the Tutorial-Part in ["Reconciling Latent Variables and Networks: Exploring and extending the Psychometric-Toolbox"](https://arxiv.org/abs/2603.26116)
 
 ```bibtex
 @unpublished{Kistermann.2026.prePrint,
@@ -17,10 +17,10 @@
 ### Data: 
 
 ([Rowland & Wenzel, 2020](https://doi.org/10.1007/s12671-020-01335-4))
-data_affect.csv \& data_net_density.csv --> https://osf.io/jmz2n/overview
 
 
 
+> data_affect.csv \& data_net_density.csv --> https://osf.io/jmz2n/overview
 
 
 ###  mlVAR_GIMME.Rmd
