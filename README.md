@@ -39,7 +39,6 @@ Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.
 
 
 ## 1. Multi-Level Vector Autoregression (in [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd))
-[![R-Package: mlVAR](https://img.shields.io/badge/R--Package-mlVAR-blue)](https://cran.r-project.org/web/packages/mlVAR/index.html)
 ```bibtex
 @article{Epskamp.2018.GGM-GVAR,
  author = {Epskamp, Sacha and Waldorp, Lourens J. and M{\~o}ttus, Ren{\'e} and Borsboom, Denny},
@@ -52,7 +51,30 @@ Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.
  doi = {10.1080/00273171.2018.1454823}
 }
 ```
+The multilevel VAR (mlVAR; [Epskamp, Waldorp, et al., 2018](https://www.tandfonline.com/doi/full/10.1080/00273171.2018.1454823)) models each person with an individual gVAR model. 
 
+Two estimation methods are imple
+mented in R-Packages, the "pooled and individual LASSO estimation"
+[![R-Package: mlVAR](https://img.shields.io/badge/R--Package-graphicalVAR-blue)](https://cran.r-project.org/web/packages/graphicalVAR/index.html)
+
+with `mlGraphicalVAR()`
+in `graphicalVAR` and used in the original analy
+sis of [Rowland & Wenzel (2020)](https://doi.org/10.1007/s12671-020-01335-4), and the "two
+step frequentist multilevel" approach which is im
+plemented with mlVAR(...) in [![R-Package: mlVAR](https://img.shields.io/badge/R--Package-mlVAR-blue)](https://cran.r-project.org/web/packages/mlVAR/index.html) (seeEp
+skamp, Waldorp, et al., 2018, for details). The
+three matrices can then be visualized as networks
+in Figure 9, where some small differences between
+the control (A) and mindfulness intervention (B)
+can be noticed. The between-person network dif
+fers the most, at least when plotting the aggregated
+network for all individuals of both groups. Net
+works of individuals can be plotted as well, here
+more pronounced differences in network topology
+can be spotted (see mlVAR_GIMME.Rmd). This
+suggest that analyzing and plotting aggregated net
+works might be of limited use, even though it is
+often the default in empirical studies.
 
 ```r
 library(mlVAR)
