@@ -31,7 +31,7 @@ In this Tutorial-Section three methods (mlVAR, GIMME, and Recurrence Analysis) a
 }
 ```
 
-Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.6% female) who answered eight items assess ing their affective experiences ("happy", "excited", "relaxed", "satisfied", "angry", "anxious", "depressed", "sad") on a visual slider scale from 0 (not at all) to 100 (very much), 6 times a day for 40 days, and were either randomly selected for a weekly mindfulness training (n=61) or a wait list control condition (n=64)
+Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.6% female) who answered eight items assess ing their affective experiences ("happy", "excited", "relaxed", "satisfied", "angry", "anxious", "depressed", "sad") on a visual slider scale from 0 (not at all) to 100 (very much), 6 times a day for 40 days, and were either randomly selected for a weekly mindfulness training (n=61) or a wait list control condition (n=64).
 
 > [!NOTE]  
 > `data_affect.csv` available at https://osf.io/jmz2n/overview<br>
@@ -86,14 +86,14 @@ plot(mlvar_group2, "contemporaneous", title = "contemporaneous (B)", layout = "c
 plot(mlvar_group1, "between", title = "between (A)", layout = "circle", nonsig = "hide", theme = "gray", vsize = 13)
 plot(mlvar_group2, "between", title = "between (B)", layout = "circle", nonsig = "hide", theme = "gray", vsize = 13)
 ```
-
-The three matrices can then be visualized as networks in Figure 9, where some small differences between the control (A) and mindfulness intervention (B) can be noticed. The between-person network dif fers the most, at least when plotting the aggregated network for all individuals of both groups. Networks of individuals can be plotted as well, here more pronounced differences in network topology can be spotted (see mlVAR_GIMME.Rmd). This suggest that analyzing and plotting aggregated net works might be of limited use, even though it is often the default in empirical studies.
-
 <p align="center">
   <img src="figures/figure_mlVAR.jpg" width="700"/>
   <br>
   <em>Figure 9: mlVAR(...) output plotted. With control group (A) and intervention group (B). Edges in the within person contemporaneous and between-person network are partial-correlations, in the within-person temporal networks lag-1 autoregressive coefficients. Shading and width indicate edge strength, with positive values (solid) and negative values (dashed).</em>
 </p>
+
+
+The three matrices can then be visualized as networks in Figure 9, where some small differences between the control (A) and mindfulness intervention (B) can be noticed. The between-person network dif fers the most, at least when plotting the aggregated network for all individuals of both groups. Networks of individuals can be plotted as well, here more pronounced differences in network topology can be spotted (see mlVAR_GIMME.Rmd). This suggest that analyzing and plotting aggregated net works might be of limited use, even though it is often the default in empirical studies.
 
 
 <p align="center">
