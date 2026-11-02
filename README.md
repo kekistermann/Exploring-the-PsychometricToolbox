@@ -1,7 +1,8 @@
 
 
 > [!NOTE]  
-> Contains the code of the Tutorial-Part in ["Reconciling Latent Variables and Networks: Exploring and extending the Psychometric-Toolbox"](https://arxiv.org/abs/2603.26116)
+> Contains the code of the Tutorial-Part in
+> <ins>"Reconciling Latent Variables and Networks: Exploring and extending the Psychometric-Toolbox"</ins> [![arxiv badge](https://img.shields.io/badge/arXiv-2408.04619-red)](https://arxiv.org/abs/2603.26116)
 
 ```bibtex
 @unpublished{Kistermann.2026.prePrint,
@@ -14,13 +15,26 @@
 ```
 
 ## Utilize your Tools (Tutorials)
-### Data: 
-
-([Rowland & Wenzel, 2020](https://doi.org/10.1007/s12671-020-01335-4))
-
 
 
 > [data_affect.csv](https://osf.io/jmz2n/overview)
+
+([Rowland & Wenzel, 2020](https://doi.org/10.1007/s12671-020-01335-4))
+```bibtex
+@article{Rowland.2020.Dataset,
+ author = {Rowland, Zarah and Wenzel, Mario},
+ year = {2020},
+ title = {Mindfulness and Affect-Network Density: Does Mindfulness Facilitate Disengagement from Affective Experiences in Daily Life?},
+ pages = {1253--1266},
+ volume = {11},
+ number = {5},
+ issn = {1868-8527},
+ journal = {Mindfulness},
+ doi = {10.1007/s12671-020-01335-4}
+}
+```
+
+
 
 
 ###  mlVAR_GIMME.Rmd
@@ -28,6 +42,18 @@
 
 also: https://arxiv.org/abs/1609.04156
 
+```bibtex
+@article{Epskamp.2018.GGM-GVAR,
+ author = {Epskamp, Sacha and Waldorp, Lourens J. and M{\~o}ttus, Ren{\'e} and Borsboom, Denny},
+ year = {2018},
+ title = {{The Gaussian Graphical Model in Cross-Sectional and Time-Series Data}},
+ pages = {453--480},
+ volume = {53},
+ number = {4},
+ journal = {{Multivariate Behavioral Research}},
+ doi = {10.1080/00273171.2018.1454823}
+}
+```
 
 ```r
 library(mlVAR)
@@ -42,14 +68,40 @@ Other Tutorial:
 #### 2. GIMME
 
 ```bibtex
-@software{weiland_gmrf_jl,
-  author    = {Weiland, Tim},
-  title     = {{GaussianMarkovRandomFields.jl}},
-  publisher = {Zenodo},
-  year      = {2025},
-  doi       = {10.5281/zenodo.18088214},
-  url       = {https://doi.org/10.5281/zenodo.18088214}
+@article{Gates.2012.GIMME,
+ author = {Gates, Kathleen M. and Molenaar, Peter C. M.},
+ year = {2012},
+ title = {Group search algorithm recovers effective connectivity maps for individuals in homogeneous and heterogeneous samples},
+ pages = {310--319},
+ volume = {63},
+ number = {1},
+ journal = {NeuroImage},
+ doi = {10.1016/j.neuroimage.2012.06.026}
 }
+
+@article{Beltz.2016.GIMME,
+ author = {Beltz, Adriene M. and Wright, Aidan G. C. and Sprague, Briana N. and Molenaar, Peter C. M.},
+ year = {2016},
+ title = {{Bridging the Nomothetic and Idiographic Approaches to the Analysis of Clinical Data}},
+ pages = {447--458},
+ volume = {23},
+ number = {4},
+ journal = {Assessment},
+ doi = {10.1177/1073191116648209 }
+}
+
+@article{Gates.2017.S-GIMME,
+ author = {Gates, Kathleen M. and Lane, Stephanie T. and Varangis, E. and Giovanello, K. and Guskiewicz, K.},
+ year = {2017},
+ title = {Unsupervised Classification During Time-Series Model Building},
+ keywords = {Model(s) - GIMME},
+ pages = {129--148},
+ volume = {52},
+ number = {2},
+ journal = {{Multivariate Behavioral Research}},
+ doi = {10.1080/00273171.2016.1256187}
+}
+
 ```
 
 
@@ -68,7 +120,18 @@ https://www.pik-potsdam.de/~donges/pyunicorn/index.html
 
 Tutorial: https://www.pik-potsdam.de/~donges/pyunicorn/examples/tutorials/RecurrenceNetworks.html
 
-
+```bibtex
+@article{Donges.2015.pyunicorn,
+ author = {Donges, Jonathan F. and Heitzig, Jobst and Beronov, Boyan and Wiedermann, Marc and Runge, Jakob and Feng, Qing Yi and Tupikina, Liubov and Stolbova, Veronika and Donner, Reik V. and Marwan, Norbert and Dijkstra, Henk A. and Kurths, J{\"u}rgen},
+ year = {2015},
+ title = {Unified functional network and nonlinear time series analysis for complex systems science: The pyunicorn package},
+ pages = {113101},
+ volume = {25},
+ number = {11},
+ journal = {Chaos},
+ doi = {10.1063/1.4934554}
+}
+```
 --> https://arxiv.org/pdf/1507.01571
 
 
