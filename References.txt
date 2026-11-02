@@ -49,16 +49,16 @@
 
 
 
-@article{Epskamp.2018.GMM-GVAR,
-author = {Epskamp, Sacha and Waldorp, Lourens J. and M?ttus, Ren? and Borsboom, Denny},
-title = {The Gaussian Graphical Model in Cross-Sectional and Time-Series Data},
-journal = {Multivariate Behavioral Research},
-volume = {53},
-number = {4},
-pages = {453--480},
-year = {2018},
-publisher = {Routledge},
-doi = {10.1080/00273171.2018.1454823}   
+@article{Epskamp.2018.GGM-GVAR,
+ abstract = {We discuss the Gaussian graphical model (GGM; an undirected network of partial correlation coefficients) and detail its utility as an exploratory data analysis tool. The GGM shows which variables predict one-another, allows for sparse modeling of covariance structures, and may highlight potential causal relationships between observed variables. We describe the utility in three kinds of psychological data sets: data sets in which consecutive cases are assumed independent (e.g., cross-sectional data), temporally ordered data sets (e.g., n = 1 time series), and a mixture of the 2 (e.g., n {\textgreater} 1 time series). In time-series analysis, the GGM can be used to model the residual structure of a vector-autoregression analysis (VAR), also termed graphical VAR. Two network models can then be obtained: a temporal network and a contemporaneous network. When analyzing data from multiple subjects, a GGM can also be formed on the covariance structure of stationary means-the between-subjects network. We discuss the interpretation of these models and propose estimation methods to obtain these networks, which we implement in the R packages graphicalVAR and mlVAR. The methods are showcased in two empirical examples, and simulation studies on these methods are included in the supplementary materials.},
+ author = {Epskamp, Sacha and Waldorp, Lourens J. and M{\~o}ttus, Ren{\'e} and Borsboom, Denny},
+ year = {2018},
+ title = {{The Gaussian Graphical Model in Cross-Sectional and Time-Series Data}},
+ pages = {453--480},
+ volume = {53},
+ number = {4},
+ journal = {{Multivariate Behavioral Research}},
+ doi = {10.1080/00273171.2018.1454823}
 }
 
 
