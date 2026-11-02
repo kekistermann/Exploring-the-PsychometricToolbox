@@ -38,7 +38,9 @@ Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.
 > see [data_README.pdf](data_README.pdf) for detailed informaiton of the dataset.
 
 ###  [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd)
-#### 1. mlVAR: Multi-Level Vector Autoregression ([R-Package](https://cran.r-project.org/web/packages/mlVAR/index.html))
+#### 1. Multi-Level Vector Autoregression 
+[![R-Package: mlVAR](https://img.shields.io/badge/R--Package-mlVAR-blue)](https://cran.r-project.org/web/packages/mlVAR/index.html)
+
 ```bibtex
 @article{Epskamp.2018.GGM-GVAR,
  author = {Epskamp, Sacha and Waldorp, Lourens J. and M{\~o}ttus, Ren{\'e} and Borsboom, Denny},
