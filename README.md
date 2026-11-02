@@ -1,7 +1,7 @@
 
 
 > [!NOTE]  
-> Contains the code of the Tutorial-Part in
+> Contains the code of the Tutorial-Part in<br>
 > "<ins>Reconciling Latent Variables and Networks: Exploring and extending the Psychometric-Toolbox</ins>" [![arxiv badge](https://img.shields.io/badge/arXiv-2408.04619-red)](https://arxiv.org/abs/2603.26116)
 
 ```bibtex
