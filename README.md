@@ -188,7 +188,7 @@ Other resources:
 
 
 # IMPS 2026 Poster
-
-
-# References
+<p align="center">
+  <img src="figures/IMPS26_Poster_A0.jpg" width="700"/>
+</p>
 
