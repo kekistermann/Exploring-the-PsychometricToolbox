@@ -1,7 +1,7 @@
 
 
 > [!NOTE]  
-> Contains the code of the Tutorial-Part in<br>
+> Contains the code of the Tutorial-Section in<br>
 > **Reconciling Latent Variables and Networks: Exploring and extending the Psychometric-Toolbox** [![arxiv badge](https://img.shields.io/badge/arXiv-2408.04619-red)](https://arxiv.org/abs/2603.26116)
 
 ```bibtex
@@ -16,10 +16,7 @@
 
 ## Utilize your Tools (Tutorials)
 
-`*******`
-
-
-([Rowland & Wenzel, 2020](https://doi.org/10.1007/s12671-020-01335-4))
+In this Tutorial-Section three methods (mlVAR, GIMME, and Recurrence Analysis) are applied to a psychometric ILD dataset from ([Rowland & Wenzel, 2020](https://doi.org/10.1007/s12671-020-01335-4)).
 ```bibtex
 @article{Rowland.2020.Dataset,
  author = {Rowland, Zarah and Wenzel, Mario},
@@ -34,16 +31,14 @@
 }
 ```
 
+Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.6% female) who answered eight items assess ing their affective experiences ("happy", "excited", "relaxed", "satisfied", "angry", "anxious", "depressed", "sad") on a visual slider scale from 0 (not at all) to 100 (very much), 6 times a day for 40 days, and were either randomly selected for a weekly mindfulness training (n=61) or a wait list control condition (n=64)
 
 > [!NOTE]  
 > `data_affect.csv` available at https://osf.io/jmz2n/overview<br>
 > see [data_README.pdf](data_README.pdf) for detailed informaiton of the dataset.
 
-###  mlVAR_GIMME.Rmd
-#### 1. mlVAR
-
-also: https://arxiv.org/abs/1609.04156
-
+###  [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd)
+#### 1. mlVAR ([R-Package](https://cran.r-project.org/web/packages/mlVAR/index.html))
 ```bibtex
 @article{Epskamp.2018.GGM-GVAR,
  author = {Epskamp, Sacha and Waldorp, Lourens J. and M{\~o}ttus, Ren{\'e} and Borsboom, Denny},
@@ -56,13 +51,10 @@ also: https://arxiv.org/abs/1609.04156
  doi = {10.1080/00273171.2018.1454823}
 }
 ```
-
-```math
-\boldsymbol{x}_{i,T} \mid \boldsymbol{x}_{i,T-1} = \mathbf{x}_{i,t-1} \sim \mathcal{N}\left(\boldsymbol{\mu}_i + \boldsymbol{B}_i\left(\boldsymbol{x}_{i,t-1} - \boldsymbol{\mu}_i\right), \boldsymbol{\Theta}_i\right)
-```
+also: https://arxiv.org/abs/1609.04156
 
 
-
+https://cran.r-project.org/web/packages/mlVAR/index.html
 ```r
 library(mlVAR)
 ```
@@ -87,7 +79,7 @@ library(mlVAR)
 
 
 
-#### 2. GIMME
+#### 2. GIMME ([R-Package](https://cran.r-project.org/web/packages/gimme/index.html))
 
 ```bibtex
 @article{Gates.2012.GIMME,
@@ -136,7 +128,7 @@ Other Resources:
 
 
 ### RecurrenceAnalysis.ipynb
-#### 3. Recurrence Analysis
+#### 3. Recurrence Analysis ([pyunicorn](https://www.pik-potsdam.de/~donges/pyunicorn/))
 
 https://www.pik-potsdam.de/~donges/pyunicorn/index.html
 
