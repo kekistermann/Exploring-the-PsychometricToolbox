@@ -2,7 +2,7 @@
 
 > [!NOTE]  
 > Contains the code of the Tutorial-Part in<br>
-> "<ins>Reconciling Latent Variables and Networks: Exploring and extending the Psychometric-Toolbox</ins>" [![arxiv badge](https://img.shields.io/badge/arXiv-2408.04619-red)](https://arxiv.org/abs/2603.26116)
+> **Reconciling Latent Variables and Networks: Exploring and extending the Psychometric-Toolbox** [![arxiv badge](https://img.shields.io/badge/arXiv-2408.04619-red)](https://arxiv.org/abs/2603.26116)
 
 ```bibtex
 @unpublished{Kistermann.2026.prePrint,
@@ -36,7 +36,8 @@
 
 
 > [!NOTE]  
-> `data_affect.csv` available at https://osf.io/jmz2n/overview
+> `data_affect.csv` available at https://osf.io/jmz2n/overview<br>
+> see [data_README.pdf](data_README.pdf) for detailed informaiton of the dataset.
 
 ###  mlVAR_GIMME.Rmd
 #### 1. mlVAR
@@ -62,8 +63,19 @@ library(mlVAR)
 
 
 ```
-Other Tutorial:   
+
+<p align="center">
+  <img src="figures/results.png" width="700"/>
+  <br>
+  <em>Figure?: Description.</em>
+</p>
+
+
+##### Other Tutorial:   
 - https://quantdev.ssri.psu.edu/sites/qdev/files/APA-ATI_ILD_Session_R_-_Multivariate_Dynamics_and_Networks.html
+
+
+
 
 
 #### 2. GIMME
