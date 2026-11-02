@@ -1,8 +1,7 @@
 
 
 > [!NOTE]  
-> Check out our [preprint](https://doi.org/10.31234/osf.io/zwe8g_v2) on the package!
-prePrint: https://arxiv.org/abs/2603.26116
+> Code of the Tutorial-Part in
 
 ```bibtex
 @unpublished{Kistermann.2026.prePrint,
