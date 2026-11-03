@@ -106,7 +106,7 @@ plot(mlvar_all, "temporal", title = "temporal network", subject = 109 ,layout = 
 ```
 
 <p align="center">
-  <img src="figures/figure_mlVAR.jpg" width="45%"/>
+  <img src="figures/figure_temporal_network_10.jpg" width="45%"/>
   <img src="figures/figure_mlVAR.jpg" width="45%"/>
 </p>
 
