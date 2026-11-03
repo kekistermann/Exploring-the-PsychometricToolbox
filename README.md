@@ -236,6 +236,11 @@ plot(S_GIMME)
 dev.off()
 ```
 
+<p align="center">
+  <img src="figures/figure_S-GIMME.jpg" width="700"/>
+  <br>
+  <em>?</em>
+</p>
 
 
 
