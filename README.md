@@ -132,6 +132,38 @@ for (s in subjects) {
  <img src="figures/figure_temporal_network_109.jpg" width="45%"/>
 </p>
 
+```r
+# plot + save all figures
+for (s in subjects) {
+  
+  plot(mlvar_all, "contemporaneous",
+       title = paste0("contemporaneous network of subject ", s),
+       subject = s,
+       layout = "circle"
+       )
+  
+  jpeg(filename = paste0("figure_contemporaneous_network_", s, ".jpg"),
+       width = 2000,
+       height = 2000,
+       res = 300)
+
+  plot(mlvar_all, "contemporaneous",
+       title = paste0("contemporaneous network of subject ", s),
+       subject = s,
+       layout = "circle"
+       )
+
+  dev.off()
+}
+```
+<p align="center">
+  <img src="figures/figure_contemporaneous_network_10.jpg" width="45%"/>
+  <img src="figures/figure_contemporaneous_network_17.jpg" width="45%"/>
+ <img src="figures/figure_contemporaneous_network_36.jpg" width="45%"/>
+ <img src="figures/figure_contemporaneous_network_55.jpg" width="45%"/>
+ <img src="figures/figure_contemporaneous_network_84.jpg" width="45%"/>
+ <img src="figures/figure_contemporaneous_network_109.jpg" width="45%"/>
+</p>
 
 ### Other Tutorial:   
 - https://quantdev.ssri.psu.edu/sites/qdev/files/APA-ATI_ILD_Session_R_-_Multivariate_Dynamics_and_Networks.html
