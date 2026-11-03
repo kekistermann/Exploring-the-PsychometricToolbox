@@ -205,7 +205,7 @@ GIMME <- gimme(data = data_GIMME_1)
 plot(GIMME)
 ```
 <p align="center">
-  <img src="figure_GIMME_control.jpg" width="700"/>
+  <img src="figures/figure_GIMME_control.jpg" width="700"/>
   <br>
   <em>?</em>
 </p>
@@ -228,7 +228,32 @@ plot(GIMME$plots$subj53)
 
 
 ### Estimate a GIMME for Group 2 (intervention)
+```r
+GIMME_2 <- gimme(data = data_GIMME_2)
 
+plot(GIMME_2)
+```
+<p align="center">
+  <img src="figures/figure_GIMME_intervention.jpg" width="700"/>
+  <br>
+  <em>?</em>
+</p>
+
+```r
+# plot random sample of individual networks
+plot(GIMME_2$plots$subj1)
+plot(GIMME_2$plots$subj31)
+plot(GIMME_2$plots$subj51)
+plot(GIMME_2$plots$subj57)
+plot(GIMME_2$plots$subj16)
+plot(GIMME_2$plots$subj27)
+```
+
+<p align="center">
+ <img src="figures/figure_GIMME_intervention_individuals.jpg" width="45%"/>
+ <br>
+ <em>?</em>
+</p>
 
 ### S-GIMME
 ```r
