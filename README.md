@@ -335,7 +335,7 @@ plt.show()
 - https://heinonmatti.github.io/complexity-behchange/Recurrence-plots.html
 
 
-# IMPS 2026 Poster
+# IMPS 2026 Poster [![DOI](https://zenodo.org/badge/1235487433.svg)](https://doi.org/10.5281/zenodo.21129486)
 <p align="center">
   <img src="figures/IMPS26_Poster_A0.jpg" width="700"/>
 </p>
