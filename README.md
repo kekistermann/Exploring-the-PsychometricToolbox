@@ -2,7 +2,7 @@
 
 > [!NOTE]  
 > Contains the code of the Tutorial-Section in<br>
-> **Reconciling Latent Variables and Networks: Exploring and extending the Psychometric-Toolbox** [![arxiv badge](https://img.shields.io/badge/arXiv-2408.04619-red)](https://arxiv.org/abs/2603.26116)
+> **Reconciling Latent Variables and Networks: Exploring and extending the Psychometric-Toolbox** [![arxiv badge](https://img.shields.io/badge/arXiv-2603.26116-red)](https://arxiv.org/abs/2603.26116)
 
 ```bibtex
 @unpublished{Kistermann.2026.prePrint,
