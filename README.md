@@ -245,9 +245,7 @@ dev.off()
 
 ## 3. Recurrence Plot (in [RecurrenceAnalysis.ipynb](RecurrenceAnalysis.ipynb))
 
-
-([pyunicorn](https://www.pik-potsdam.de/~donges/pyunicorn/))
-[![python: pyunicorn](https://img.shields.io/badge/python-pyunicorn-green)](https://cran.r-project.org/web/packages/gimme/index.html)
+[![python: pyunicorn](https://img.shields.io/badge/python-pyunicorn-green)](https://www.pik-potsdam.de/~donges/pyunicorn)
 
 ```bibtex
 @article{Donges.2015.pyunicorn,
