@@ -111,14 +111,16 @@ plot(mlvar_all, "temporal", title = "temporal network", subject = 109 ,layout = 
 </p>
 
 
-##### Other Tutorial:   
+### Other Tutorial:   
 - https://quantdev.ssri.psu.edu/sites/qdev/files/APA-ATI_ILD_Session_R_-_Multivariate_Dynamics_and_Networks.html
 
 
 
 
 
-#### 2. GIMME ([R-Package](https://cran.r-project.org/web/packages/gimme/index.html))
+## 2. GIMME (in [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd))
+
+([R-Package](https://cran.r-project.org/web/packages/gimme/index.html))
 
 ```bibtex
 @article{Gates.2012.GIMME,
@@ -160,14 +162,16 @@ plot(mlvar_all, "temporal", title = "temporal network", subject = 109 ,layout = 
 
 
 
-Other Resources:  
+### Other Turorials:  
 - https://tarheels.live/gimme/tutorials/  
 - https://andysbrainbook.readthedocs.io/en/latest/Statistics/GIMME.html  
 - https://cran.r-project.org/web/packages/gimme/vignettes/gimme_vignette.html  
 
 
-### RecurrenceAnalysis.ipynb
-#### 3. Recurrence Analysis ([pyunicorn](https://www.pik-potsdam.de/~donges/pyunicorn/))
+## 3. Recurrence Analysis (in [RecurrenceAnalysis.ipynb](RecurrenceAnalysis.ipynb))
+
+
+([pyunicorn](https://www.pik-potsdam.de/~donges/pyunicorn/))
 
 https://www.pik-potsdam.de/~donges/pyunicorn/index.html
 
