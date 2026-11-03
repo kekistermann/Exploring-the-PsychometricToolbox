@@ -97,17 +97,39 @@ plot(mlvar_group2, "between", title = "between (B)", layout = "circle", nonsig =
 
 ```r
 # random sample of people
-plot(mlvar_all, "temporal", title = "temporal network", subject = 10 ,layout = "circle", nonsig = "hide")
-plot(mlvar_all, "temporal", title = "temporal network", subject = 17 ,layout = "circle", nonsig = "hide")
-plot(mlvar_all, "temporal", title = "temporal network", subject = 36 ,layout = "circle", nonsig = "hide")
-plot(mlvar_all, "temporal", title = "temporal network", subject = 55 ,layout = "circle", nonsig = "hide")
-plot(mlvar_all, "temporal", title = "temporal network", subject = 84 ,layout = "circle", nonsig = "hide")
-plot(mlvar_all, "temporal", title = "temporal network", subject = 109 ,layout = "circle", nonsig = "hide")
+subjects <- c(10, 17, 36, 55, 84, 109)
+
+# plot + save all figures
+for (s in subjects) {
+  
+  plot(mlvar_all, "temporal",
+       title = paste0("temporal network of subject ", s),
+       subject = s,
+       layout = "circle"
+       )
+  
+  jpeg(filename = paste0("figure_temporal_network_", s, ".jpg"),
+       width = 2000,
+       height = 2000,
+       res = 300)
+
+  plot(mlvar_all, "temporal",
+       title = paste0("temporal network of subject ", s),
+       subject = s,
+       layout = "circle"
+       )
+
+  dev.off()
+}
 ```
 
 <p align="center">
   <img src="figures/figure_temporal_network_10.jpg" width="45%"/>
-  <img src="figures/figure_mlVAR.jpg" width="45%"/>
+  <img src="figures/figure_temporal_network_17.jpg" width="45%"/>
+ <img src="figures/figure_temporal_network_36.jpg" width="45%"/>
+ <img src="figures/figure_temporal_network_55.jpg" width="45%"/>
+ <img src="figures/figure_temporal_network_84.jpg" width="45%"/>
+ <img src="figures/figure_temporal_network_109.jpg" width="45%"/>
 </p>
 
 
