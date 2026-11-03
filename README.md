@@ -247,7 +247,7 @@ dev.off()
 
 
 ([pyunicorn](https://www.pik-potsdam.de/~donges/pyunicorn/))
-
+[![python: pyunicorn](https://img.shields.io/badge/python-pyunicorn-green)](https://cran.r-project.org/web/packages/gimme/index.html)
 
 ```bibtex
 @article{Donges.2015.pyunicorn,
@@ -262,6 +262,56 @@ dev.off()
 }
 ```
 
+
+```python
+from pyunicorn.timeseries import RecurrencePlot
+import numpy as np
+import matplotlib.pyplot as plt
+
+# select the person
+person = 120
+
+df_person = df[df["subjno"] == person] # filter the df for a specific person
+
+df_person = df_person.iloc[:, -8:] # only keep the variable columns
+
+# rename the columns
+df_person.columns = (
+    "happy",
+    "excited",
+    "relaxed",
+    "satisfied",
+    "angry",
+    "anxious",
+    "depressed",
+    "sad",
+)
+#remove rows with NaN values --> which is ok to do because "the concept of recurrence plots does not require observations that are equally spaced in time."?
+df_person = df_person.dropna() 
+
+
+# https://www.pik-potsdam.de/~donges/pyunicorn/api/timeseries/recurrence_plot.html
+# metric = "manhattan", "euclidean", or "supremum"
+RecPlo = RecurrencePlot(df_person.to_numpy(), metric="euclidean", normalize=True, threshold=0.7) # .to_numpy() because we imported a pandas df, but we need a numpy array
+
+stats = RecPlo.rqa_summary() #some summary statistics of the Recurrence Plot
+
+
+
+plt.matshow(np.tril(RecPlo.recurrence_matrix()) , origin='lower', cmap="binary")
+plt.ylabel("$t$")
+plt.xticks(np.arange(0, len(df_person), 20))
+plt.yticks(np.arange(0, len(df_person), 20))
+
+txt = "\n".join(f"{k} = {v:.2f}" for k, v in stats.items())
+plt.text(0.75, 0.2, txt, transform=plt.gca().transAxes,
+    va="top",
+    bbox=dict(facecolor="white", alpha=0.8)
+)
+
+plt.show()
+
+```
 
 
 
