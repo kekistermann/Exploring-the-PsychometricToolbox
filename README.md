@@ -38,7 +38,7 @@ Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.
 > see [data_README.pdf](data_README.pdf) for detailed informaiton about the dataset.
 
 
-## 1. Multi-Level Vector Autoregression (in [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd))
+## 1. Multi-Level Vector Autoregression (mlVAR) [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd)
 ```bibtex
 @article{Epskamp.2018.GGM-GVAR,
  author = {Epskamp, Sacha and Waldorp, Lourens J. and M{\~o}ttus, Ren{\'e} and Borsboom, Denny},
@@ -118,7 +118,7 @@ plot(mlvar_all, "temporal", title = "temporal network", subject = 109 ,layout = 
 
 
 
-## 2. GIMME (in [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd))
+## 2. Group Iterative Multiple Model Estimation (GIMME) in [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd)
 
 ([R-Package](https://cran.r-project.org/web/packages/gimme/index.html))
 
@@ -168,14 +168,11 @@ plot(mlvar_all, "temporal", title = "temporal network", subject = 109 ,layout = 
 - https://cran.r-project.org/web/packages/gimme/vignettes/gimme_vignette.html  
 
 
-## 3. Recurrence Analysis (in [RecurrenceAnalysis.ipynb](RecurrenceAnalysis.ipynb))
+## 3. Recurrence Plot (in [RecurrenceAnalysis.ipynb](RecurrenceAnalysis.ipynb))
 
 
 ([pyunicorn](https://www.pik-potsdam.de/~donges/pyunicorn/))
 
-https://www.pik-potsdam.de/~donges/pyunicorn/index.html
-
-Tutorial: https://www.pik-potsdam.de/~donges/pyunicorn/examples/tutorials/RecurrenceNetworks.html
 
 ```bibtex
 @article{Donges.2015.pyunicorn,
@@ -189,11 +186,12 @@ Tutorial: https://www.pik-potsdam.de/~donges/pyunicorn/examples/tutorials/Recurr
  doi = {10.1063/1.4934554}
 }
 ```
---> https://arxiv.org/pdf/1507.01571
+
 
 
 
 ### Other resources:
+- https://www.pik-potsdam.de/~donges/pyunicorn/examples/tutorials/RecurrenceNetworks.html
 - https://complexity-methods.github.io/book/lvSystem.html
 - http://www.recurrence-plot.tk
 - https://mathworld.wolfram.com/RecurrencePlot.html
