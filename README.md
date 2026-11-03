@@ -1,5 +1,3 @@
-
-
 > [!NOTE]  
 > Contains the code of the Tutorial-Section in<br>
 > **Reconciling Latent Variables and Networks: Exploring and extending the Psychometric-Toolbox** [![arxiv badge](https://img.shields.io/badge/arXiv-2603.26116-red)](https://arxiv.org/abs/2603.26116)
@@ -124,13 +122,19 @@ for (s in subjects) {
 ```
 
 <p align="center">
-  <img src="figures/figure_temporal_network_10.jpg" width="45%"/>
-  <img src="figures/figure_temporal_network_17.jpg" width="45%"/>
+ <img src="figures/figure_temporal_network_10.jpg" width="45%"/>
+ <img src="figures/figure_temporal_network_17.jpg" width="45%"/>
  <img src="figures/figure_temporal_network_36.jpg" width="45%"/>
  <img src="figures/figure_temporal_network_55.jpg" width="45%"/>
  <img src="figures/figure_temporal_network_84.jpg" width="45%"/>
  <img src="figures/figure_temporal_network_109.jpg" width="45%"/>
+ <br>
+ <em>Green edges indicate positive weights and red edges indicate negative weights.</em>
 </p>
+
+
+
+
 
 ```r
 # plot + save all figures
