@@ -177,9 +177,7 @@ for (s in subjects) {
 
 
 ## 2. Group Iterative Multiple Model Estimation (GIMME) in [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd)
-
-([R-Package](https://cran.r-project.org/web/packages/gimme/index.html))
-
+[![R-Package: mlVAR](https://img.shields.io/badge/R--Package-gimme-blue)](https://cran.r-project.org/web/packages/gimme/index.html)
 ```bibtex
 @article{Gates.2012.GIMME,
  author = {Gates, Kathleen M. and Molenaar, Peter C. M.},
@@ -215,6 +213,25 @@ for (s in subjects) {
  doi = {10.1080/00273171.2016.1256187}
 }
 
+```
+
+### S-GIMME
+```r
+library(gimme)
+
+S_GIMME <- gimme(data        = data_GIMME, 
+                 subgroup    = TRUE,
+                 sub_feature = "lag & contemp", 
+                 sub_method  = "Walktrap", 
+                 groupcutoff = .75, 
+                 subcutoff   = .75)
+
+plot(S_GIMME)
+
+# generate Figure
+jpeg("S-GIMME.jpg", width = 1000, height = 1000, res = 300)
+plot(S_GIMME)
+dev.off()
 ```
 
 
