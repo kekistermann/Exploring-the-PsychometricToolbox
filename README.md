@@ -359,7 +359,7 @@ plt.show()
 <p align="center">
   <img src="figures/figure_recurrence_plot_person_120.jpg" width="700"/>
   <br>
-  <em>?</em>
+  <em>Figure 10: Recurrence Plot of one individual. Metrics: Recurrence Rate (RR), Determinism (DET), average diagonal line Length (L), and Laminarity (LAM).</em>
 </p>
 
 
