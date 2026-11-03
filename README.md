@@ -216,6 +216,11 @@ for (s in subjects) {
 }
 
 ```
+### Estimate a GIMME for Group 1 (control)
+
+
+### Estimate a GIMME for Group 2 (intervention)
+
 
 ### S-GIMME
 ```r
