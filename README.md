@@ -161,12 +161,14 @@ for (s in subjects) {
 }
 ```
 <p align="center">
-  <img src="figures/figure_contemporaneous_network_10.jpg" width="45%"/>
-  <img src="figures/figure_contemporaneous_network_17.jpg" width="45%"/>
+ <img src="figures/figure_contemporaneous_network_10.jpg" width="45%"/>
+ <img src="figures/figure_contemporaneous_network_17.jpg" width="45%"/>
  <img src="figures/figure_contemporaneous_network_36.jpg" width="45%"/>
  <img src="figures/figure_contemporaneous_network_55.jpg" width="45%"/>
  <img src="figures/figure_contemporaneous_network_84.jpg" width="45%"/>
  <img src="figures/figure_contemporaneous_network_109.jpg" width="45%"/>
+ <br>
+ <em>Green edges indicate positive weights and red edges indicate negative weights.</em>
 </p>
 
 ### Other Tutorial:   
