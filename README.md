@@ -93,8 +93,17 @@ plot(mlvar_group2, "between", title = "between (B)", layout = "circle", nonsig =
 </p>
 
 
-**The three matrices can then be visualized as networks in Figure 9, where some small differences between the control (A) and mindfulness intervention (B) can be noticed. The between-person network dif fers the most, at least when plotting the aggregated network for all individuals of both groups. Networks of individuals can be plotted as well, here more pronounced differences in network topology can be spotted (see mlVAR_GIMME.Rmd). This suggest that analyzing and plotting aggregated net works might be of limited use, even though it is often the default in empirical studies.**
+**Differences between control and intervention group seem to be small, at least when plotting the aggregated network for all individuals of both groups. Networks of individuals can be plotted as well, here more pronounced differences in network topology can be spotted. This suggest that analyzing and plotting aggregated networks might be of limited use, even though it is often the default in empirical research.**
 
+```r
+# random sample of people
+plot(mlvar_all, "temporal", title = "temporal network", subject = 10 ,layout = "circle", nonsig = "hide")
+plot(mlvar_all, "temporal", title = "temporal network", subject = 17 ,layout = "circle", nonsig = "hide")
+plot(mlvar_all, "temporal", title = "temporal network", subject = 36 ,layout = "circle", nonsig = "hide")
+plot(mlvar_all, "temporal", title = "temporal network", subject = 55 ,layout = "circle", nonsig = "hide")
+plot(mlvar_all, "temporal", title = "temporal network", subject = 84 ,layout = "circle", nonsig = "hide")
+plot(mlvar_all, "temporal", title = "temporal network", subject = 109 ,layout = "circle", nonsig = "hide")
+```
 
 <p align="center">
   <img src="figures/figure_mlVAR.jpg" width="45%"/>
