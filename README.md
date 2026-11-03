@@ -99,25 +99,11 @@ subjects <- c(10, 17, 36, 55, 84, 109)
 
 # plot + save all figures
 for (s in subjects) {
-  
-  plot(mlvar_all, "temporal",
+    plot(mlvar_all, "temporal",
        title = paste0("temporal network of subject ", s),
        subject = s,
        layout = "circle"
        )
-  
-  jpeg(filename = paste0("figure_temporal_network_", s, ".jpg"),
-       width = 2000,
-       height = 2000,
-       res = 300)
-
-  plot(mlvar_all, "temporal",
-       title = paste0("temporal network of subject ", s),
-       subject = s,
-       layout = "circle"
-       )
-
-  dev.off()
 }
 ```
 
@@ -139,25 +125,11 @@ for (s in subjects) {
 ```r
 # plot + save all figures
 for (s in subjects) {
-  
   plot(mlvar_all, "contemporaneous",
        title = paste0("contemporaneous network of subject ", s),
        subject = s,
        layout = "circle"
        )
-  
-  jpeg(filename = paste0("figure_contemporaneous_network_", s, ".jpg"),
-       width = 2000,
-       height = 2000,
-       res = 300)
-
-  plot(mlvar_all, "contemporaneous",
-       title = paste0("contemporaneous network of subject ", s),
-       subject = s,
-       layout = "circle"
-       )
-
-  dev.off()
 }
 ```
 <p align="center">
@@ -236,6 +208,22 @@ plot(GIMME)
   <img src="figure_GIMME_control.jpg" width="700"/>
   <br>
   <em>?</em>
+</p>
+
+```r
+# plot random sample of individual networks
+plot(GIMME$plots$subj4)
+plot(GIMME$plots$subj17)
+plot(GIMME$plots$subj52)
+plot(GIMME$plots$subj62)
+plot(GIMME$plots$subj36)
+plot(GIMME$plots$subj53)
+```
+
+<p align="center">
+ <img src="figures/figure_GIMME_control_individuals.jpg" width="45%"/>
+ <br>
+ <em>?</em>
 </p>
 
 
