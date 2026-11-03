@@ -218,6 +218,26 @@ for (s in subjects) {
 ```
 ### Estimate a GIMME for Group 1 (control)
 
+```r
+data_GIMME_1 <- data_group1 %>%
+  group_by(subjno) %>%
+  group_split() %>%
+  lapply(function(df) 
+    {df %>%
+      select(-subjno, -dayno, -beep, -group) %>% # remove all columns that are not variables
+      as.data.frame() # gimme prefers base data.frames
+      })
+
+GIMME <- gimme(data = data_GIMME_1)
+
+plot(GIMME)
+```
+<p align="center">
+  <img src="figure_GIMME_control.jpg" width="700"/>
+  <br>
+  <em>?</em>
+</p>
+
 
 ### Estimate a GIMME for Group 2 (intervention)
 
