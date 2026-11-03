@@ -318,6 +318,13 @@ plt.show()
 
 ```
 
+<p align="center">
+  <img src="figures/figure_recurrence_plot_person_120.jpg" width="700"/>
+  <br>
+  <em>?</em>
+</p>
+
+
 
 
 ### Other resources:
