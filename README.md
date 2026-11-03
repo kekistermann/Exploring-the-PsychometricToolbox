@@ -193,7 +193,7 @@ Tutorial: https://www.pik-potsdam.de/~donges/pyunicorn/examples/tutorials/Recurr
 
 
 
-Other resources:
+### Other resources:
 - https://complexity-methods.github.io/book/lvSystem.html
 - http://www.recurrence-plot.tk
 - https://mathworld.wolfram.com/RecurrencePlot.html
