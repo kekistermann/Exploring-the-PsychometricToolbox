@@ -282,10 +282,7 @@ dev.off()
   <em>Group-level edges, estimated across all individuals, are shown in black, whereas individual-level paths are shown in grey. Green paths are subgroup-level. Edge width corresponds to the proportion of individuals who had that edge estimated. Dashed lines indicate lag-1 relations; solid lines lag-0 (contemporaneous) relations.</em>
 </p>
 
-**Actually detects two groups, but they not really correspond to the control and intervention groups**
-
-
-
+**Actually detects two groups, but do really correspond to the control and intervention group? Not really, the estimated sub-groups are only the same for 54	people, and different for 44, 27 individuals could not be assigned to either two subgroups. Characterizing these two groups in more detail might be interesting to do in future research.**
 
 ### Other Turorials:  
 - https://tarheels.live/gimme/tutorials/  
