@@ -339,7 +339,8 @@ df_person.columns = (
     "depressed",
     "sad",
 )
-#remove rows with NaN values --> which is ok to do because "the concept of recurrence plots does not require observations that are equally spaced in time."?
+# remove rows with NaN values
+# --> which is ok to do because "the concept of recurrence plots does not require observations that are equally spaced in time."?
 df_person = df_person.dropna() 
 
 
