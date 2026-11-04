@@ -13,8 +13,7 @@
 ```
 
 # Utilize your Tools (Tutorials)
-
-In this Tutorial-Section three methods (mlVAR, GIMME, and Recurrence Plot) are applied to a psychometric ILD dataset from [Rowland & Wenzel (2020)](https://doi.org/10.1007/s12671-020-01335-4).
+In this Tutorial-Section three methods (mlVAR, GIMME, and Recurrence Plot) are applied  ([mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd), [RecurrenceAnalysis.ipynb](RecurrenceAnalysis.ipynb)) to a psychometric ILD dataset from [Rowland & Wenzel (2020)](https://doi.org/10.1007/s12671-020-01335-4).
 ```bibtex
 @article{Rowland.2020.Dataset,
  author = {Rowland, Zarah and Wenzel, Mario},
@@ -36,7 +35,7 @@ Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.
 > see [data_README.pdf](data_README.pdf) for furhter informaiton about the dataset.
 
 
-## 1. multi-level Vector Autoregression (mlVAR) [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd)
+## 1. multi-level Vector Autoregression (mlVAR) in [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd)
 ```bibtex
 @article{Epskamp.2018.GGM-GVAR,
  author = {Epskamp, Sacha and Waldorp, Lourens J. and M{\~o}ttus, Ren{\'e} and Borsboom, Denny},
@@ -296,7 +295,7 @@ dev.off()
 - https://cran.r-project.org/web/packages/gimme/vignettes/gimme_vignette.html  
 
 
-## 3. Recurrence Plot (in [RecurrenceAnalysis.ipynb](RecurrenceAnalysis.ipynb))
+## 3. Recurrence Plot in [RecurrenceAnalysis.ipynb](RecurrenceAnalysis.ipynb)
 
 
 
