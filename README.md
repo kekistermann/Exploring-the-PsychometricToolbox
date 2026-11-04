@@ -14,7 +14,7 @@
 
 # Utilize your Tools (Tutorials)
 
-In this Tutorial-Section three methods (mlVAR, GIMME, and Recurrence Analysis) are applied to a psychometric ILD dataset from [Rowland & Wenzel (2020)](https://doi.org/10.1007/s12671-020-01335-4).
+In this Tutorial-Section three methods (mlVAR, GIMME, and Recurrence Plot) are applied to a psychometric ILD dataset from [Rowland & Wenzel (2020)](https://doi.org/10.1007/s12671-020-01335-4).
 ```bibtex
 @article{Rowland.2020.Dataset,
  author = {Rowland, Zarah and Wenzel, Mario},
@@ -29,14 +29,14 @@ In this Tutorial-Section three methods (mlVAR, GIMME, and Recurrence Analysis) a
 }
 ```
 
-Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.6% female) who answered eight items assess ing their affective experiences ("happy", "excited", "relaxed", "satisfied", "angry", "anxious", "depressed", "sad") on a visual slider scale from 0 (not at all) to 100 (very much), 6 times a day for 40 days, and were either randomly selected for a weekly mindfulness training (n=61) or a wait list control condition (n=64).
+Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.6% female) who answered eight items assessing their affective experiences ("happy", "excited", "relaxed", "satisfied", "angry", "anxious", "depressed", "sad") on a visual slider scale from 0 (not at all) to 100 (very much), 6 times a day for 40 days, and were either randomly selected for a weekly mindfulness training (n=61) or a wait list control condition (n=64).
 
 > [!NOTE]  
 > `data_affect.csv` available at https://osf.io/jmz2n/overview<br>
-> see [data_README.pdf](data_README.pdf) for detailed informaiton about the dataset.
+> see [data_README.pdf](data_README.pdf) for furhter informaiton about the dataset.
 
 
-## 1. Multi-Level Vector Autoregression (mlVAR) [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd)
+## 1. multi-level Vector Autoregression (mlVAR) [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd)
 ```bibtex
 @article{Epskamp.2018.GGM-GVAR,
  author = {Epskamp, Sacha and Waldorp, Lourens J. and M{\~o}ttus, Ren{\'e} and Borsboom, Denny},
@@ -49,7 +49,7 @@ Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.
  doi = {10.1080/00273171.2018.1454823}
 }
 ```
-The multilevel VAR (mlVAR; [Epskamp, Waldorp, et al., 2018](https://www.tandfonline.com/doi/full/10.1080/00273171.2018.1454823)) models each person with an individual gVAR model. Two estimation methods are implemented in R-Packages, the _pooled and individual LASSO estimation_ with `mlGraphicalVAR()` in [![R-Package: mlVAR](https://img.shields.io/badge/R--Package-graphicalVAR-blue)](https://cran.r-project.org/web/packages/graphicalVAR/index.html) and used in the original analy sis of [Rowland & Wenzel (2020)](https://doi.org/10.1007/s12671-020-01335-4), and the _two step frequentist multilevel_ approach which is im plemented with `mlVAR()` in [![R-Package: mlVAR](https://img.shields.io/badge/R--Package-mlVAR-blue)](https://cran.r-project.org/web/packages/mlVAR/index.html). 
+The multilevel VAR (mlVAR; [Epskamp, Waldorp, et al., 2018](https://www.tandfonline.com/doi/full/10.1080/00273171.2018.1454823)) models each person with an individual gVAR model. Two estimation methods are implemented in R-Packages, the _pooled and individual LASSO estimation_ with `mlGraphicalVAR()` in [![R-Package: mlVAR](https://img.shields.io/badge/R--Package-graphicalVAR-blue)](https://cran.r-project.org/web/packages/graphicalVAR/index.html) and used in the original analysis of [Rowland & Wenzel (2020)](https://doi.org/10.1007/s12671-020-01335-4), and the _two step frequentist multilevel_ approach which is implemented with `mlVAR()` in [![R-Package: mlVAR](https://img.shields.io/badge/R--Package-mlVAR-blue)](https://cran.r-project.org/web/packages/mlVAR/index.html). 
 
 ```r
 library(mlVAR)
@@ -87,11 +87,11 @@ plot(mlvar_group2, "between", title = "between (B)", layout = "circle", nonsig =
 <p align="center">
   <img src="figures/figure_mlVAR.jpg" width="700"/>
   <br>
-  <em>Figure 9: mlVAR(...) output plotted. With control group (A) and intervention group (B). Edges in the within person contemporaneous and between-person network are partial-correlations, in the within-person temporal networks lag-1 autoregressive coefficients. Shading and width indicate edge strength, with positive values (solid) and negative values (dashed).</em>
+  <em>Figure 9: mlVAR(...) output plotted. With control group (A) and intervention group (B). With temporal effects (lag-1 regression weights), contemporaneous relationships (partial correlations) and between-subject effects (partial correlations). Shading and width indicate edge strength, with positive values (solid) and negative values (dashed).</em>
 </p>
 
 
-**Differences between control and intervention group seem to be small, at least when plotting the aggregated network for all individuals of both groups. Networks of individuals can be plotted as well, here more pronounced differences in network topology can be spotted. This suggest that analyzing and plotting aggregated networks might be of limited use, even though it is often the default in empirical research.**
+**Differences between control and intervention group seem to be small, at least when plotting the aggregated network for all individuals of both groups. Networks of individuals can be plotted as well, here more pronounced differences in network topology can be spotted (see below). This suggests that analyzing individual networks, rather than aggregated networks—which is currently the default in empirical research—may offer more valuable insights.**
 
 ```r
 # random sample of people
