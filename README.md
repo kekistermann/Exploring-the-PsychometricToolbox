@@ -345,9 +345,9 @@ df_person = df_person.dropna()
 
 
 # https://www.pik-potsdam.de/~donges/pyunicorn/api/timeseries/recurrence_plot.html
-# metric = "manhattan", "euclidean", or "supremum"
-RecPlo = RecurrencePlot(df_person.to_numpy(), metric="euclidean", normalize=True, threshold=0.7) # .to_numpy() because we imported a pandas df, but we need a numpy array
-
+## metric = "manhattan", "euclidean", or "supremum"
+## .to_numpy() because we imported a pandas df, but we need a numpy array
+RecPlo = RecurrencePlot(df_person.to_numpy(), metric="euclidean", normalize=True, threshold=0.7) 
 stats = RecPlo.rqa_summary() #some summary statistics of the Recurrence Plot
 
 
