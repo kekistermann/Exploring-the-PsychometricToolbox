@@ -115,7 +115,7 @@ for (s in subjects) {
  <img src="figures/figure_temporal_network_84.jpg" width="45%"/>
  <img src="figures/figure_temporal_network_109.jpg" width="45%"/>
  <br>
- <em>Green edges indicate positive weights and red edges indicate negative weights.</em>
+ <em>Shading and width indicate edge strength, with green edges for positive weights and red edges for negative weights.</em>
 </p>
 
 
@@ -140,7 +140,7 @@ for (s in subjects) {
  <img src="figures/figure_contemporaneous_network_84.jpg" width="45%"/>
  <img src="figures/figure_contemporaneous_network_109.jpg" width="45%"/>
  <br>
- <em>Green edges indicate positive weights and red edges indicate negative weights.</em>
+ <em>Shading and width indicate edge strength, with green edges for positive weights and red edges for negative weights.</em>
 </p>
 
 ### Other Tutorial:   
@@ -151,7 +151,7 @@ for (s in subjects) {
 
 
 ## 2. Group Iterative Multiple Model Estimation (GIMME) in [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd)
-[![R-Package: mlVAR](https://img.shields.io/badge/R--Package-gimme-blue)](https://cran.r-project.org/web/packages/gimme/index.html)
+
 ```bibtex
 @article{Gates.2012.GIMME,
  author = {Gates, Kathleen M. and Molenaar, Peter C. M.},
@@ -186,8 +186,8 @@ for (s in subjects) {
  journal = {{Multivariate Behavioral Research}},
  doi = {10.1080/00273171.2016.1256187}
 }
-
 ```
+[![R-Package: mlVAR](https://img.shields.io/badge/R--Package-gimme-blue)](https://cran.r-project.org/web/packages/gimme/index.html)
 ### Estimate a GIMME for Group 1 (control)
 
 ```r
@@ -207,8 +207,10 @@ plot(GIMME)
 <p align="center">
   <img src="figures/figure_GIMME_control.jpg" width="700"/>
   <br>
-  <em>?</em>
+  <em>Group-level edges, estimated across all individuals, are shown in black, whereas individual-level paths are shown in grey. Edge width corresponds to the proportion of individuals who had that edge estimated. Dashed lines indicate lag-1 relations; solid lines lag-0 (contemporaneous) relations.</em>
 </p>
+
+**Here again, differences in individual network topology are apparent (see below).**
 
 ```r
 # plot random sample of individual networks
@@ -223,7 +225,7 @@ plot(GIMME$plots$subj53)
 <p align="center">
  <img src="figures/figure_GIMME_control_individuals.jpg" width="45%"/>
  <br>
- <em>?</em>
+ <em></em>
 </p>
 
 
@@ -236,7 +238,7 @@ plot(GIMME_2)
 <p align="center">
   <img src="figures/figure_GIMME_intervention.jpg" width="700"/>
   <br>
-  <em>?</em>
+  <em>Group-level edges, estimated across all individuals, are shown in black, whereas individual-level paths are shown in grey. Edge width corresponds to the proportion of individuals who had that edge estimated. Dashed lines indicate lag-1 relations; solid lines lag-0 (contemporaneous) relations.</em>
 </p>
 
 ```r
@@ -277,8 +279,11 @@ dev.off()
 <p align="center">
   <img src="figures/figure_S-GIMME.jpg" width="700"/>
   <br>
-  <em>?</em>
+  <em>Group-level edges, estimated across all individuals, are shown in black, whereas individual-level paths are shown in grey. Green paths are subgroup-level. Edge width corresponds to the proportion of individuals who had that edge estimated. Dashed lines indicate lag-1 relations; solid lines lag-0 (contemporaneous) relations.</em>
 </p>
+
+
+
 
 
 
