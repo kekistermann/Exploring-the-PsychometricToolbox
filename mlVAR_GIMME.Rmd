@@ -1,0 +1,580 @@
+---
+title: "Utilize your Tools - Tutorials (1/2)"
+output:
+  html_document:
+    toc: true
+    theme: united
+---
+
+https://github.com/kekistermann/Exploring-the-PsychometricToolbox
+
+# Import the dataset
+Data is available here: https://osf.io/jmz2n/overview (contains "data_affect.csv")
+```{r}
+
+library(tidyverse)
+
+# define variable names
+# c("happy", "excited", "relaxed", "satisfied", "angry","anxious", "depressed", "sad")
+variables <- c("hap", "exc", "rel", "sat", "ang","anx", "dep", "sad") #shorter names for better Figures later
+
+# Read in the CSV file, arrange the data & rename the 6 emotion variables
+data <- read_csv("data_affect.csv", na = "") %>%
+  arrange(subjno, group, dayno, beep) %>%
+  rename_with(~ variables, .cols = c("emo1_m", "emo2_m", "emo3_m", "emo4_m", "emo5_m", "emo6_m", "emo7_m", "emo8_m"))
+  
+# create a subset with only group 1 (control)
+data_group1 <- data %>% 
+  filter(group == 1)
+
+# create a subset with only group 2 (mindfulness training)
+data_group2 <- data %>% 
+  filter(group == 2)
+
+# count the number of people in each group
+data %>%
+  distinct(group, subjno) %>%
+  count(group)
+```
+
+
+
+
+# multilevel VAR (mlVAR)
+https://cran.r-project.org/web/packages/mlVAR
+## 'mlvar()'
+"The function 'mlvar()' computes estimates of the multivariate vector autoregression model. This model returns three stuctures: temporal effects (e.g., lag-1 regression weights), contemporaneous relationships (correlations or partial correlations) and between-subject effects (correlations and partial correlations)." https://cran.r-project.org/web/packages/mlVAR/refman/mlVAR.html#mlVAR
+
+```{r}
+
+library(mlVAR)
+
+#estimating mlVAR model
+mlvar_all <- mlVAR(data,
+                     vars = variables,
+                     idvar = "subjno",
+                     lags = 1, 
+                     dayvar = "dayno", 
+                     beepvar = "beep")
+
+mlvar_group1 <- mlVAR(data_group1, 
+                     vars = variables,
+                     idvar = "subjno",
+                     lags = 1, 
+                     dayvar = "dayno", 
+                     beepvar = "beep")
+
+mlvar_group2 <- mlVAR(data_group2, 
+                     vars = variables,
+                     idvar = "subjno",
+                     lags = 1, 
+                     dayvar = "dayno", 
+                     beepvar = "beep")
+```
+
+
+
+
+### Summary statistics of 'mlVAR()' output with 'summary()'
+"Prints tables with fit indices and parameter estimates." https://cran.r-project.org/web/packages/mlVAR/refman/mlVAR.html#summary.mlVAR
+```{r}
+#summary(mlvar_all)
+#summary(mlvar_group1)
+#summary(mlvar_group2)
+```
+
+
+
+
+### Plotting the output of 'mlVAR()' with 'plot()'
+"plots estimated model coefficients as networks using qgraph. These can be three networks: temporal, contemporaneous and between-subjects effects, of which the latter two can be plotted as a correlation or a partial correlation network." https://cran.r-project.org/web/packages/mlVAR/refman/mlVAR.html#plot.mlVAR
+
+
+#### generate Figure 9 in Publication
+**Differences between control and intervention group seem to be small, for the between-persons network some differences can be recognized. But there seems to be clear differences between individual network topologies.**
+```{r}
+jpeg("figure_mlVAR.jpg", width = 1500, height = 2000, res = 300)
+layout(matrix(1:6, nrow = 3, ncol = 2, byrow = TRUE))
+
+plot(mlvar_group1, "temporal", title = "temporal (A)", layout = "circle", nonsig = "hide", theme = "gray", vsize = 13)
+plot(mlvar_group2, "temporal", title = "temporal (B)", layout = "circle", nonsig = "hide", theme = "gray", vsize = 13)
+
+
+plot(mlvar_group1, "contemporaneous", title = "contemporaneous (A)", layout = "circle", nonsig = "hide", theme = "gray", vsize = 13)
+plot(mlvar_group2, "contemporaneous", title = "contemporaneous (B)", layout = "circle", nonsig = "hide", theme = "gray", vsize = 13)
+
+# Plot between-persons partial correlations
+plot(mlvar_group1, "between", title = "between (A)", layout = "circle", nonsig = "hide", theme = "gray", vsize = 13)
+plot(mlvar_group2, "between", title = "between (B)", layout = "circle", nonsig = "hide", theme = "gray", vsize = 13)
+
+dev.off()
+```
+
+
+
+
+
+#### temporal network (lag-1 relations):
+```{r}
+
+plot(mlvar_all, "temporal", title = "temporal (all)", layout = "circle", nonsig = "dashed")
+
+
+
+# plot random sample of individual temporal networks
+subjects <- c(10, 17, 36, 55, 84, 109)
+
+# plot + save all figures
+for (s in subjects) {
+  
+  plot(mlvar_all, "temporal",
+       title = paste0("temporal network of subject ", s),
+       subject = s,
+       layout = "circle"
+       )
+  
+  jpeg(filename = paste0("figure_temporal_network_", s, ".jpg"),
+       width = 2000,
+       height = 2000,
+       res = 300)
+
+  plot(mlvar_all, "temporal",
+       title = paste0("temporal network of subject ", s),
+       subject = s,
+       layout = "circle"
+       )
+
+  dev.off()
+}
+
+```
+
+
+
+
+
+#### contemporaneous network:
+```{r}
+plot(mlvar_all, "contemporaneous", title = "contemporaneous (all)", layout = "circle", nonsig = "hide")
+
+# plot individual contemporaneous networks + save all figures
+for (s in subjects) {
+  
+  plot(mlvar_all, "contemporaneous",
+       title = paste0("contemporaneous network of subject ", s),
+       subject = s,
+       layout = "circle"
+       )
+  
+  jpeg(filename = paste0("figure_contemporaneous_network_", s, ".jpg"),
+       width = 2000,
+       height = 2000,
+       res = 300)
+
+  plot(mlvar_all, "contemporaneous",
+       title = paste0("contemporaneous network of subject ", s),
+       subject = s,
+       layout = "circle"
+       )
+
+  dev.off()
+}
+
+
+```
+
+
+
+
+
+
+
+
+
+
+# Group Iterative Multiple Model Estimation (GIMME) framework
+https://cran.r-project.org/web/packages/gimme/index.html
+## Transform data in format required for 'gimme()'
+```{r}
+# transform our tbl_df into the format required for gimme()
+data_GIMME <- data %>%
+  group_by(subjno) %>%
+  group_split() %>%
+  lapply(function(df) 
+    {df %>%
+      select(-subjno, -dayno, -beep, -group) %>% # remove all columns that are not variables
+      as.data.frame() # gimme prefers base data.frames
+      })
+
+data_GIMME_1 <- data_group1 %>%
+  group_by(subjno) %>%
+  group_split() %>%
+  lapply(function(df) 
+    {df %>%
+      select(-subjno, -dayno, -beep, -group) %>% # remove all columns that are not variables
+      as.data.frame() # gimme prefers base data.frames
+      })
+
+data_GIMME_2 <- data_group2 %>%
+  group_by(subjno) %>%
+  group_split() %>%
+  lapply(function(df) 
+    {df %>%
+      select(-subjno, -dayno, -beep, -group) %>% # remove all columns that are not variables
+      as.data.frame() # gimme prefers base data.frames
+      })
+```
+
+
+
+
+
+
+
+## GIMME: for each group (control and mindfulness intervention) separately
+### Estimate a GIMME for Group 1 (control)
+**Here again, differences in individual network topology are apparent.**
+```{r}
+library(gimme)
+
+GIMME <- gimme(data = data_GIMME_1)
+
+plot(GIMME)
+
+# generate figure
+jpeg("figure_GIMME_control.jpg", width = 1000, height = 1000, res = 300)
+plot(GIMME)
+dev.off()
+
+# plot random sample of individual networks
+plot(GIMME$plots$subj4)
+plot(GIMME$plots$subj17)
+plot(GIMME$plots$subj52)
+plot(GIMME$plots$subj62)
+plot(GIMME$plots$subj36)
+plot(GIMME$plots$subj53)
+
+
+
+# generate Figure
+jpeg("figure_GIMME_control_individuals.jpg", width = 1500, height = 1500, res = 300)
+layout(matrix(1:6, nrow = 3, ncol = 2, byrow = TRUE))
+plot(GIMME$plots$subj4)
+plot(GIMME$plots$subj17)
+plot(GIMME$plots$subj52)
+plot(GIMME$plots$subj62)
+plot(GIMME$plots$subj36)
+plot(GIMME$plots$subj53)
+dev.off()
+```
+
+
+
+
+
+### Estimate a GIMME for Group 2 (intervention)
+**Here too, but how to compare them?**
+```{r}
+GIMME_2 <- gimme(data = data_GIMME_2)
+
+plot(GIMME_2)
+
+# generate figure
+jpeg("figure_GIMME_intervention.jpg", width = 1000, height = 1000, res = 300)
+plot(GIMME_2)
+dev.off()
+
+# plot random sample of individual networks
+plot(GIMME_2$plots$subj1)
+plot(GIMME_2$plots$subj31)
+plot(GIMME_2$plots$subj51)
+plot(GIMME_2$plots$subj57)
+plot(GIMME_2$plots$subj16)
+plot(GIMME_2$plots$subj27)
+
+# generate Figure
+jpeg("figure_GIMME_intervention_individuals.jpg", width = 1500, height = 1500, res = 300)
+layout(matrix(1:6, nrow = 3, ncol = 2, byrow = TRUE))
+plot(GIMME_2$plots$subj1)
+plot(GIMME_2$plots$subj31)
+plot(GIMME_2$plots$subj51)
+plot(GIMME_2$plots$subj57)
+plot(GIMME_2$plots$subj16)
+plot(GIMME_2$plots$subj27)
+dev.off()
+```
+
+
+
+
+
+
+
+## S-GIMME
+"conducts the community-detection algorithm Walktrap (Pons & Latapy, 2006) on temporal features available during GIMME model building. After arriving at the group-level effects, S-GIMME identifies effects that may be specific to each subgroup. Finally, as with the original GIMME algorithm, S-GIMME conducts individual-level searches. All weights are estimated at the individual level-even for those dynamic relations found to exist at the group or subgroup levels. Importantly, the researcher does not need to decide the number of subgroups - the algorithm finds the number. The final models contain reliable group-, subgroup-, and individual-level patterns that enable generalizable inferences, subgroups of individuals with shared model features, and individual-level patterns and estimates."
+```{r}
+library(gimme)
+
+S_GIMME <- gimme(data        = data_GIMME, 
+                 subgroup    = TRUE,
+                 sub_feature = "lag & contemp", 
+                 sub_method  = "Walktrap", 
+                 groupcutoff = .75, 
+                 subcutoff   = .75)
+
+plot(S_GIMME)
+
+# generate figure
+jpeg("figure_S-GIMME.jpg", width = 1000, height = 1000, res = 300)
+plot(S_GIMME)
+dev.off()
+
+
+# Plot random sample of individual networks
+plot(S_GIMME$plots$subj10)
+plot(S_GIMME$plots$subj17)
+plot(S_GIMME$plots$subj36)
+plot(S_GIMME$plots$subj55)
+plot(S_GIMME$plots$subj84)
+plot(S_GIMME$plots$subj109)
+```
+
+**"Number of subgroups = 2" --> so actually detects two groups!**
+
+
+
+
+### check the sub-groups
+**Do they correspond to the control and intervention groups? Not really, the estimated sub-groups consist of almost equal number of people from the control and intervention group in the dataset, this holds also for the people who could not be assigned to either one of the S-Gimme groups. Therefore, characterizing these two groups in more detail might be interesting to do in future research.**
+
+```{r}
+# get the subgroup for each individual estimated with S-GIMME --> "sub_membership" column
+S_GIMME_output <- as_tibble(S_GIMME$fit %>%
+  select(file, sub_membership) %>%
+    mutate(file = as.integer(sub("^subj", "", file)))
+    )
+
+# get the group (control or mindfulness training) for each individual in the dataset --> "group" column
+group_ids <- data %>%
+  distinct(group, subjno) %>%
+  select(subjno, group)
+
+group_comparison <- group_ids %>%
+  left_join(S_GIMME_output %>% select(file, sub_membership),
+    by = c("subjno" = "file")
+  )
+
+# for the estimated groups with S-GIMME (sub_memberhsip) --> what's the number of people from control or mindfulness training (dataset)
+group_comparison %>%
+  group_by(sub_membership) %>%
+    summarise(
+      control_group1 = sum(group == 1, na.rm = TRUE),
+      intervention_group2 = sum(group == 2, na.rm = TRUE),
+      .groups = "drop"
+    )
+  
+```
+
+
+
+
+# Original Analysis done in (Rowland & Wenzel 2020)
+@article{Rowland.2020.Dataset,
+ author = {Rowland, Zarah and Wenzel, Mario},
+ year = {2020},
+ title = {{Mindfulness and Affect-Network Density: Does Mindfulness Facilitate Disengagement from Affective Experiences in Daily Life?}},
+ pages = {1253--1266},
+ volume = {11},
+ number = {5},
+ issn = {1868-8527},
+ journal = {Mindfulness},
+ doi = {10.1007/s12671-020-01335-4}
+}
+
+code available here: https://osf.io/jmz2n/overview
+
+```{r}
+library("qgraph")
+library("graphicalVAR") # https://cran.r-project.org/web/packages/graphicalVAR/index.html
+
+### outcome names
+outnames <- c("happy", "excited", "relaxed", "satisfied", "angry","anxious", "depressed", "sad")
+
+dat <- read.table("data_affect.csv", sep=",", header=TRUE, na.strings="")
+
+##sort data
+dat <- dat[order(dat$subjno, dat$group, dat$dayno, dat$beep),]
+
+names(dat)[pmatch(c("emo1_m", "emo2_m", "emo3_m", "emo4_m", "emo5_m", "emo6_m", "emo7_m", "emo8_m"),
+                  names(dat))] <- outnames
+
+## modeling temporal networks (with https://cran.r-project.org/web/packages/graphicalVAR/index.html)
+myData_ind_dat<- mlGraphicalVAR(dat, 
+                                vars = c("happy", "excited", "relaxed", "satisfied", "angry", "anxious", "depressed", "sad"), 
+                                dayvar = "dayno", 
+                                idvar = "subjno",
+                                lags = 1, 
+                                beepvar = "beep", 
+                                subjectNetworks = TRUE, 
+                                centerWithin = TRUE, 
+                                gamma = 0, 
+                                lambda_kappa = 0, 
+                                lambda_beta = 0)
+
+ID = myData_ind_dat$ids
+
+myData_ind_dat$fixedResults$N
+
+## extracting individuals' temporal network density
+t_oad=c()
+for (i in 1:125){
+  t_oad[i] <- mean(abs(myData_ind_dat$subjectPDC[[i]][1:8, 1:8]))}
+
+t_pad=c()
+for (i in 1:125){
+  t_pad[i] <- mean(abs(myData_ind_dat$subjectPDC[[i]][1:8, 1:4]))}
+
+t_nad=c()
+for (i in 1:125){
+  t_nad[i] <- mean(abs(myData_ind_dat$subjectPDC[[i]][1:8, 5:8]))}
+
+
+
+## extracting individuals' contemporaneous network density
+c_oad=c()
+for (i in 1:125){
+  c_oad[i] <- ((sum(abs(myData_ind_dat$subjectPCC[[i]][1:8, 1:8]))))/2/28}
+
+c_pad=c()
+for (i in 1:125){
+  c_pad[i] <- ((sum(abs(myData_ind_dat$subjectPCC[[i]][1:4, 1:4]))))/2/6}
+
+c_nad=c()
+for (i in 1:125){
+  c_nad[i] <- ((sum(abs(myData_ind_dat$subjectPCC[[i]][5:8, 5:8]))))/2/6}
+
+c_pa_nad=c()
+for (i in 1:125){
+  c_pa_nad[i] <- ((mean(abs(myData_ind_dat$subjectPCC[[i]][1:4, 5:8]))))}
+
+options(max.print = 99999999)
+
+
+##extracting temporal single-affect network densities
+t_happy=c()
+for (i in 1:125){
+  t_happy[i] <- mean(abs(myData_ind_dat$subjectPDC[[i]][1:8, 1:1]))}
+
+t_excited=c()
+for (i in 1:125){
+  t_excited[i] <- mean(abs(myData_ind_dat$subjectPDC[[i]][1:8, 2:2]))}
+
+t_relaxed=c()
+for (i in 1:125){
+  t_relaxed[i] <- mean(abs(myData_ind_dat$subjectPDC[[i]][1:8, 3:3]))}
+
+t_satisfied=c()
+for (i in 1:125){
+  t_satisfied[i] <- mean(abs(myData_ind_dat$subjectPDC[[i]][1:8, 4:4]))}
+
+t_angry=c()
+for (i in 1:125){
+  t_angry[i] <- mean(abs(myData_ind_dat$subjectPDC[[i]][1:8, 5:5]))}
+
+t_anxious=c()
+for (i in 1:125){
+  t_anxious[i] <- mean(abs(myData_ind_dat$subjectPDC[[i]][1:8, 6:6]))}
+
+t_depressed=c()
+for (i in 1:125){
+  t_depressed[i] <- mean(abs(myData_ind_dat$subjectPDC[[i]][1:8, 7:7]))}
+
+t_sad=c()
+for (i in 1:125){
+  t_sad[i] <- mean(abs(myData_ind_dat$subjectPDC[[i]][1:8, 8:8]))}
+
+
+## combining all individual network densities
+all_matrix <- cbind(ID, t_oad, t_pad, t_nad, c_oad, c_pad, c_nad, c_pa_nad, t_happy, t_excited, t_relaxed, t_satisfied, t_angry, t_anxious, t_depressed, t_sad)
+write.csv(all_matrix, "all_matrix.csv")
+
+
+
+## population networks: Figure 1
+qgraph(myData_ind_dat$fixedPDC, layout = "circle", theme = "gray")
+
+qgraph(myData_ind_dat$fixedPCC, layout = "circle", theme = "gray")
+
+qgraph(myData_ind_dat$betweenNet, layout = "circle", theme = "gray")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
