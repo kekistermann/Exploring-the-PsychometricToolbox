@@ -317,6 +317,9 @@ dev.off()
 from pyunicorn.timeseries import RecurrencePlot
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
+
+df = pd.read_csv("data_affect.csv")
 
 # select the person
 person = 120
