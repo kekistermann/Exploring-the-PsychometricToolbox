@@ -298,7 +298,7 @@ dev.off()
 
 ## 3. Recurrence Plot (in [RecurrenceAnalysis.ipynb](RecurrenceAnalysis.ipynb))
 
-[![python: pyunicorn](https://img.shields.io/badge/python-pyunicorn-green)](https://www.pik-potsdam.de/~donges/pyunicorn)
+
 
 ```bibtex
 @article{Donges.2015.pyunicorn,
@@ -312,7 +312,7 @@ dev.off()
  doi = {10.1063/1.4934554}
 }
 ```
-
+[![python: pyunicorn](https://img.shields.io/badge/python-pyunicorn-green)](https://www.pik-potsdam.de/~donges/pyunicorn)
 
 ```python
 from pyunicorn.timeseries import RecurrencePlot
