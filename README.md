@@ -225,7 +225,7 @@ plot(GIMME$plots$subj53)
 <p align="center">
  <img src="figures/figure_GIMME_control_individuals.jpg" width="45%"/>
  <br>
- <em></em>
+ <em>Red paths represent positive weights and blue paths represent negative weights. Dashed lines indicate lag-1 relations; solid lines lag-0 (contemporaneous) relations.</em>
 </p>
 
 
@@ -254,7 +254,7 @@ plot(GIMME_2$plots$subj27)
 <p align="center">
  <img src="figures/figure_GIMME_intervention_individuals.jpg" width="45%"/>
  <br>
- <em>?</em>
+ <em>Red paths represent positive weights and blue paths represent negative weights. Dashed lines indicate lag-1 relations; solid lines lag-0 (contemporaneous) relations.</em>
 </p>
 
 ### S-GIMME
@@ -282,7 +282,7 @@ dev.off()
   <em>Group-level edges, estimated across all individuals, are shown in black, whereas individual-level paths are shown in grey. Green paths are subgroup-level. Edge width corresponds to the proportion of individuals who had that edge estimated. Dashed lines indicate lag-1 relations; solid lines lag-0 (contemporaneous) relations.</em>
 </p>
 
-
+**Actually detects two groups, but they not really correspond to the control and intervention groups**
 
 
 
