@@ -282,7 +282,13 @@ dev.off()
   <em>Group-level edges, estimated across all individuals, are shown in black, whereas individual-level paths are shown in grey. Green paths are subgroup-level. Edge width corresponds to the proportion of individuals who had that edge estimated. Dashed lines indicate lag-1 relations; solid lines lag-0 (contemporaneous) relations.</em>
 </p>
 
-**Actually detects two groups, but do really correspond to the control and intervention group? Not really, the estimated sub-groups are only the same for 54	people, and different for 44, 27 individuals could not be assigned to either two subgroups. Characterizing these two groups in more detail might be interesting to do in future research.**
+**Although two groups are identified, do they correspond to the control and intervention groups? Not quite. The estimated subgroups comprise almost equal numbers of participants from the control and intervention groups. This is also true for participants who could not be assigned to either of the two S-GIMME groups. Therefore, characterizing these two estiamted groups in more detail might be interesting to do in future research.**
+
+| S-GIMME groups | number of people in control group | number of people in intervention group |
+|:-------------:|:--------------:|:-------------------:|
+| 1             | 36             | 28                  |
+| 2             | 16             | 18                  |
+| NA            | 12             | 15                  |
 
 ### Other Turorials:  
 - https://tarheels.live/gimme/tutorials/  
