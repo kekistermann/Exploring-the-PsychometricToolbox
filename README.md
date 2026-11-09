@@ -11,6 +11,7 @@
  note = {Preprint}
 }
 ```
++ [Supplementary Materials](SupplementaryMaterials.pdf)
 
 # Utilize your Tools (Tutorials)
 In this Tutorial-Section three methods (mlVAR, GIMME, and Recurrence Plot) are applied  ([mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd), [RecurrenceAnalysis.ipynb](RecurrenceAnalysis.ipynb)) to a psychometric ILD dataset from [Rowland & Wenzel (2020)](https://doi.org/10.1007/s12671-020-01335-4).
