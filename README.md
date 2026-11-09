@@ -2,6 +2,8 @@
 > Contains the code of the Tutorial-Section in<br>
 > **Reconciling Latent Variables and Networks: Exploring and extending the Psychometric-Toolbox** [![arxiv badge](https://img.shields.io/badge/arXiv-2603.26116-red)](https://arxiv.org/abs/2603.26116)
 
++ [Supplementary Materials](SupplementaryMaterials.pdf)
+
 ```bibtex
 @unpublished{Kistermann.2026.prePrint,
  author = {Kistermann, Kevin and Andriamiarana, Vivato V. and Kelava, Augustin},
@@ -11,7 +13,7 @@
  note = {Preprint}
 }
 ```
-+ [Supplementary Materials](SupplementaryMaterials.pdf)
+
 
 # Utilize your Tools (Tutorials)
 In this Tutorial-Section three methods (mlVAR, GIMME, and Recurrence Plot) are applied  ([mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd), [RecurrenceAnalysis.ipynb](RecurrenceAnalysis.ipynb)) to a psychometric ILD dataset from [Rowland & Wenzel (2020)](https://doi.org/10.1007/s12671-020-01335-4).
