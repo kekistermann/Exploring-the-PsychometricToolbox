@@ -35,7 +35,7 @@ Consisting of of 125 undergraduate students (M age = 22.87; SD = 5.06 years; 77.
 
 > [!NOTE]  
 > `data_affect.csv` available at https://osf.io/jmz2n/overview<br>
-> see [data_README.pdf](data_README.pdf) for furhter informaiton about the dataset.
+> see [data_README.pdf](data_README.pdf) for further informaiton about the dataset.
 
 
 ## 1. multi-level Vector Autoregression (mlVAR) in [mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd)
