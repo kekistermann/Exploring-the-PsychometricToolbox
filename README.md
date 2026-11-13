@@ -15,7 +15,7 @@
 ```
 
 
-# Utilize your Tools (Tutorials)
+# Utilize your Tools (Tutorials) [![DOI](https://zenodo.org/badge/1439556315.svg)](https://doi.org/10.5281/zenodo.24187806)
 In this Tutorial-Section three methods (mlVAR, GIMME, and Recurrence Plot) are applied  ([mlVAR_GIMME.Rmd](mlVAR_GIMME.Rmd), [RecurrenceAnalysis.ipynb](RecurrenceAnalysis.ipynb)) to a psychometric ILD dataset from [Rowland & Wenzel (2020)](https://doi.org/10.1007/s12671-020-01335-4).
 ```bibtex
 @article{Rowland.2020.Dataset,
