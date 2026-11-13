@@ -202,6 +202,8 @@ data_GIMME_1 <- data_group1 %>%
       as.data.frame() # gimme prefers base data.frames
       })
 
+library(gimme)
+
 GIMME <- gimme(data = data_GIMME_1)
 
 plot(GIMME)
