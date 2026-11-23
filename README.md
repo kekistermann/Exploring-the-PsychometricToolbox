@@ -181,7 +181,6 @@ for (s in subjects) {
  author = {Gates, Kathleen M. and Lane, Stephanie T. and Varangis, E. and Giovanello, K. and Guskiewicz, K.},
  year = {2017},
  title = {Unsupervised Classification During Time-Series Model Building},
- keywords = {Model(s) - GIMME},
  pages = {129--148},
  volume = {52},
  number = {2},
